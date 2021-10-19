@@ -9,8 +9,7 @@
     <title>Traffic Violation</title>
 </head>
 <body>
-    <header class="py-2">
-        <div class="mask"></div>
+    <header class="py-2 position-relative mb-5">
         <div class="overlay"></div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-lg">
@@ -29,13 +28,14 @@
                 </div>
             </div>
         </nav>
-        <div class="header-bottom container-lg mt-5">
+        <div class="header-bottom container-lg mt-5 overflow-hidden">
+            <div class="mask"></div>
             <div>
                 <div class="mb-5">
                     <h1 class="text-secondary fs-1 mb-4">6805 <span class="fs-3">vụ tai nạn</span></h1>
-                    <p style="max-width: 20rem;" class="text-secondary mb-0">Hãy tuân thủ luật giao thông để  tránh mất mát cho gia đình và xã hội. Bạn có thể tra cứu lỗi vi phạm của mình trên GoSafer!</p>
+                    <p class="header-bottom-content text-secondary mb-0">Hãy tuân thủ luật giao thông để  tránh mất mát cho gia đình và xã hội. Bạn có thể tra cứu lỗi vi phạm của mình trên GoSafer!</p>
                 </div>
-                <div class="d-flex flex-wrap align-items-center mb-4">
+                <div class="d-flex flex-wrap align-items-center justify-content-center mb-4">
                     <button class="p-2 btn-rounded-left text-light me-4">Hà Nội</button>
                     <button class="p-2 btn-rounded-left text-light me-4">Hồ Chí Minh</button>
                     <button class="p-2 btn-rounded-left text-light">Toàn Quốc</button>
@@ -43,6 +43,29 @@
             </div>
         </div>
     </header>
+    <section class="news container-lg">
+        <h2 class="news-title">Tin tức</h2>
+        <div class="row">
+            <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                <div class="card-news">
+                    <div class="card-news-img mb-4">
+                        <img src="/resource/img/news1.jpg" alt="">
+                    </div>
+                    <h6 class="card-news-title">Chú chó 'nghiện' giao thông công cộng.Chú chó 'nghiện' giao thông công cộng</h6>
+                    <p class="card-news-content text-secondary">Trong chuyến phà chở khách đông đúc ở Istanbul, mọi con mắt đều hướng về một chú chó đang ngắm nhìn phong cảnh từ cửa sổ.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-4 col-sm-6 col-12">
+                <div class="card-news">
+                    <div class="card-news-img mb-4">
+                        <img src="/resource/img/news1.jpg" alt="">
+                    </div>
+                    <h6 class="card-news-title">Chú chó 'nghiện' giao thông công cộng</h6>
+                    <p class="card-news-content text-secondary">Trong chuyến phà chở khách đông đúc ở Istanbul, mọi con mắt đều hướng về một chú chó đang ngắm nhìn phong cảnh từ cửa sổ.Trong chuyến phà chở khách đông đúc ở Istanbul, mọi con mắt đều hướng về một chú chó đang ngắm nhìn phong cảnh từ cửa sổ</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="/resource/js/boootstrap5.js"></script>
 </body>
 </html>
