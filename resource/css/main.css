@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Inter', sans-serif;
 }
 
 a{
@@ -19,6 +19,8 @@ a{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* Button */
 
 button, button:hover, button:focus, button:active{
     outline: none !important;
@@ -46,9 +48,25 @@ button, button:hover, button:focus, button:active{
     color: white;
 }
 
+.btn-icon {
+    padding: 10px;
+    margin: 0;
+    border-radius: 9999px;
+    background-color: #F2F3F4;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    fill: #424949;
+    color: #1B2631;
+}
+
+.btn-icon:hover {
+    color: #28B463;
+}
+
 /* Header */
 
-header {
+header.header-home {
     min-height: 60vh;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
     overflow: hidden;
@@ -90,7 +108,7 @@ header {
     z-index: -1;
 }
 
-header .overlay {
+header.header-home .overlay {
     transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: absolute;
     top: 0;
@@ -121,7 +139,7 @@ header .overlay {
 }
 
 @media (min-width: 1200px) {
-    header .overlay {
+    header.header-home .overlay {
         width: 60vw;
     }
 
@@ -137,6 +155,11 @@ header .overlay {
 .navbar-brand {
     font-weight: 500;
     color: #424949;
+}
+
+.navbar-brand img {
+    height: 2.25rem;
+    object-fit: contain;
 }
 
 .nav-item.dropdown .dropdown-menu {
@@ -166,14 +189,6 @@ header .overlay {
 .news-title {
     font-size: xx-large;
     font-weight: 700;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -271,5 +286,41 @@ header .overlay {
     }
 }
 
+/* Breadcrumb */
+
+.breadcrumb-item a{
+    color: #1B2631;
+}
+
+.breadcrumb-item a:hover {
+    color: #28B463;
+}
+
+/* Main Content and News Content*/
+
+.news-content img{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 /* Footer */
 
+footer {
+    background-color: #28B463;
+}
+
+footer .breadcrumb-item *{
+    color: #fff;
+}
+
+footer .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: #fff;
+}
+
+.footer-logo img{
+    height: 3rem;
+    object-fit: contain;
+}
