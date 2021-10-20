@@ -8,6 +8,11 @@ a{
     text-decoration: none !important;
 }
 
+::selection {
+    background-color: #52BE80;
+    color: white;
+}
+
 .truncate {
     width: 100%;
     white-space: nowrap;
@@ -132,6 +137,28 @@ header .overlay {
 .navbar-brand {
     font-weight: 500;
     color: #424949;
+}
+
+.nav-item.dropdown .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 0 30px rgb(127 137 161 / 25%);
+    transition: all .3s ease;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    left:0x;
+    top: 100%;
+    z-index: 9999;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: none;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* News Section */
