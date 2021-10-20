@@ -314,6 +314,10 @@ footer .breadcrumb-item *{
     color: #fff;
 }
 
+footer .breadcrumb-item:hover * {
+    color: white;
+}
+
 footer .breadcrumb-item+.breadcrumb-item::before {
     float: left;
     padding-right: .5rem;
