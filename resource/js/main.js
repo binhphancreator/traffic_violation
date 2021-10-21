@@ -39,3 +39,29 @@ function includeHtml() {
 }
 
 includeHtml();
+
+function counterNumberIncrease(container, counter, max) {
+    setTimeout(() => {
+        counter+=Math.round(max/15);
+        document.getElementById(container).innerHTML = `${counter}`
+        if(counter < max) setTimeout(() => counterNumberIncrease(container,counter , max), 0.000000001) 
+        else document.getElementById(container).innerHTML = `${max}`
+    }, 50)
+}
+
+var cities = {
+    hn:{number:8000},
+    hcm:{number:7000},
+    all:{number:15000},
+}
+
+setTimeout(() => counterNumberIncrease('numberOfViolation',1 , cities['hn']['number']), 10)
+
+$('button[data-city]').each((index, btn) => {
+    btn.onclick = e => {
+        let city = e.target.getAttribute('data-city')
+        setTimeout(() => counterNumberIncrease('numberOfViolation',1 , cities[city]['number']), 10)
+        $('button[data-city].active').removeClass('active')
+        e.target.classList.add('active')
+    }
+})
