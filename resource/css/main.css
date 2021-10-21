@@ -20,6 +20,11 @@ a{
     text-overflow: ellipsis;
 }
 
+/* Link */
+.link-dark:hover {
+    color: #28B463;
+}
+
 /* Button */
 
 button, button:hover, button:focus, button:active{

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resource/css/boootstrap.css">
     <link rel="stylesheet" href="/resource/css/main.css">
-    <title>GoSafter</title>
+    <title>GoSafer | Tài liệu</title>
 </head>
 <body>
-    <header class="py-2 position-relative mb-5 header-home">
+    <header class="py-2 position-relative mb-2">
         <div class="overlay"></div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-lg">
@@ -38,40 +38,29 @@
                 </div>
             </div>
         </nav>
-        <div class="header-bottom container-lg mt-5 overflow-hidden">
-            <div class="mask"></div>
-            <div>
-                <div class="mb-5">
-                    <h1 class="text-secondary fs-1 mb-4">6805 <span class="fs-3">vụ tai nạn</span></h1>
-                    <p class="header-bottom-content text-secondary mb-0">Hãy tuân thủ luật giao thông để  tránh mất mát cho gia đình và xã hội. Bạn có thể tra cứu lỗi vi phạm của mình trên GoSafer!</p>
-                </div>
-                <div class="d-flex flex-wrap align-items-center justify-content-center mb-4">
-                    <button class="p-2 btn-rounded-left text-light me-4">Hà Nội</button>
-                    <button class="p-2 btn-rounded-left text-light me-4">Hồ Chí Minh</button>
-                    <button class="p-2 btn-rounded-left text-light">Toàn Quốc</button>
-                </div>
-            </div>
-        </div>
     </header>
-    <section class="news container-lg mb-5">
-        <h2 class="news-title">Tin nổi bật</h2>
-        <div class="row" id="newsList">
-            <div class="col-12">
-                <div class="card-news card-hoz">
-                    <a href='/' class="card-news-img mb-4">
-                        <img src="/resource/img/news1.jpg" alt="">
-                    </a>
-                    <div class="card-news-body">
-                        <a href='/' class="card-news-title">Chú chó 'nghiện' giao thông công cộng.</a>
-                        <p class="card-news-content text-secondary">Trong chuyến phà chở khách đông đúc ở Istanbul, mọi con mắt đều hướng về một chú chó đang ngắm nhìn phong cảnh từ cửa sổ.</p>
-                        <div class="card-news-relate">
-                            <a href='/' class="">Chú chó 'nghiện' giao thông công cộng.Chú chó 'nghiện' giao thông công cộng.</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <nav class="container-lg mb-2" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" aria-current="page"><a href="/">Trang Chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/">Tài liệu</a></li>
+        </ol>
+    </nav>
+
+    <section class="main-content container-lg">
+        <table class="table table-light mb-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tên tài liệu</th>
+                    <th scope="col">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTableDocument">
+            </tbody>
+        </table>
     </section>
+
     <footer class="py-2 pt-5">
         <div class="container-lg">
             <div class="row">
@@ -120,6 +109,7 @@
             </div>
         </div>
     </footer>
+
     <script src="/resource/js/jquery.js"></script>
     <script src="/resource/js/boootstrap5.js"></script>
     <script src="/resource/js/main.js"></script>
