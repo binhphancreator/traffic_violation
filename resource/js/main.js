@@ -50,9 +50,9 @@ function counterNumberIncrease(container, counter, max) {
 }
 
 var cities = {
-    hn:{number:8000},
-    hcm:{number:7000},
-    all:{number:15000},
+    hn:{number:8000, img:'map.jpeg'},
+    hcm:{number:7000, img:'hcm.jpg'},
+    all:{number:15000, img: 'vn.jpg'},
 }
 
 setTimeout(() => counterNumberIncrease('numberOfViolation',1 , cities['hn']['number']), 10)
@@ -61,6 +61,7 @@ $('button[data-city]').each((index, btn) => {
     btn.onclick = e => {
         let city = e.target.getAttribute('data-city')
         setTimeout(() => counterNumberIncrease('numberOfViolation',1 , cities[city]['number']), 10)
+        $('#map').css({'background-image' : `url('/resource/img/${cities[city]['img']}')`})
         $('button[data-city].active').removeClass('active')
         e.target.classList.add('active')
     }
