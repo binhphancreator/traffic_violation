@@ -1,4 +1,4 @@
-for(let i=0;i<5;i++) {
+for (let i = 0; i < 5; i++) {
     $('#newsList').append(
         ' \
             <div class="col-xl-3 col-md-4 col-sm-6 col-12 my-1"> \
@@ -14,11 +14,11 @@ for(let i=0;i<5;i++) {
     )
 }
 
-for(let i=0;i<20;i++) {
+for (let i = 0; i < 20; i++) {
     $('#bodyTableDocument').append(
         `\
             <tr> \
-                <th scope="row">${i+1}</th> \
+                <th scope="row">${i + 1}</th> \
                 <td>Tài liệu về an toàn giao thông.</td> \
                 <td><a class="d-inline-block link-dark" href="#"> \
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="d-inline-block" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/></svg> \
@@ -46,16 +46,16 @@ function counterNumberIncrease(number) {
     }, {
         duration: 600,
         easing: 'swing',
-        step: function(now) {
+        step: function (now) {
             $(this).text(Math.ceil(now));
         },
     });
 }
 
 var cities = {
-    hn:{number:8000, img:'map.jpeg'},
-    hcm:{number:7000, img:'hcm.jpg'},
-    all:{number:15000, img: 'vn.jpg'},
+    hn: { number: 8000, img: 'map.jpeg' },
+    hcm: { number: 7000, img: 'hcm.jpg' },
+    all: { number: 15000, img: 'vn.jpg' },
 }
 
 
@@ -67,3 +67,87 @@ $('button[data-city]').each((index, btn) => {
         e.target.classList.add('active')
     }
 })
+
+var canvas = document.getElementById('chart-violation-yearly');
+
+if (canvas) var chartViolationYearly = new Chart(canvas.getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+        datasets: [{
+            label: 'Số vụ vi phạm (nghìn vụ)',
+            data: [12, 22, 19, 16, 10, 14],
+            backgroundColor: 'rgba(35, 155, 86, .5)',
+            borderColor: '#239B56',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    font: {
+                        family: "'Inter', sans-serif",
+                        size:16,
+                    }
+                }
+            },
+            title: {
+                display: false,
+                text: ''
+            },
+            tooltip: {
+                callbacks:{
+                    label: function(context) {
+                        return `Số vụ vi phạm: ${context.formattedValue} nghìn vụ`;
+                    },
+                    title: function(context) {
+                        return `Năm ${context[0].label}`;
+                    },
+                },
+                bodyFont: {
+                    family: "'Inter', sans-serif",
+                    size:14,
+                },
+                titleFont: {
+                    family: "'Inter', sans-serif",
+                    size:16,
+                },
+                usePointStyle: false,
+                intersect: false,
+                displayColors: false,
+            },
+        },
+        animations: {
+            radius: {
+                duration: 500,
+                easing: 'easeInQuad',
+                from: 5,
+                to: 15,
+                loop: true
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    font: {
+                        family: "'Inter', sans-serif",
+                        size:14,
+                    },
+                    color: '#1C2833',
+                }
+            },
+            y: {
+                ticks: {
+                    font: {
+                        family: "'Inter', sans-serif",
+                        size:14,
+                    },
+                    color: '#1C2833'
+                }
+            }
+        }
+    }
+});
