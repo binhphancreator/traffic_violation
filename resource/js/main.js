@@ -206,12 +206,9 @@ if (canvasTop10Violation ) var canvasTop10Violation = new Chart(canvasTop10Viola
             },
         },
         animations: {
-            radius: {
+            tension: {
                 duration: 500,
                 easing: 'easeInQuad',
-                from: 5,
-                to: 15,
-                loop: true
             }
         },
         scales: {

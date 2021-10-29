@@ -25,6 +25,28 @@ a{
     color: #28B463;
 }
 
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #28B463;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1D8348;
+  }
+
 /* Button */
 
 button, button:hover, button:focus, button:active{
