@@ -189,7 +189,7 @@ if (canvasTop10Violation ) var canvasTop10Violation = new Chart(canvasTop10Viola
                         return `Số vụ vi phạm: ${context.formattedValue} nghìn vụ`;
                     },
                     title: function(context) {
-                        return `Năm ${context[0].label}`;
+                        return `${context[0].label}`;
                     },
                 },
                 bodyFont: {
