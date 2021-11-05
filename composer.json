@@ -1,0 +1,16 @@
+{
+    "name": "gosafer/gosafer",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Gosafer\\Gosafer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "binhphancreator",
+            "email": "binhpv.B18PT031@stu.ptit.edu.vn"
+        }
+    ],
+    "require": {}
+}
