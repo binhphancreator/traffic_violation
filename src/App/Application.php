@@ -2,14 +2,13 @@
 
 namespace GoSafer\App;
 
-use GoSafer\Provider\EnviromentService;
-
 class Application {
     private string $basePath = '';
     public static Application $app;
     private $instances = array();
     private $services = [
-        EnviromentService::class,
+        \GoSafer\Provider\EnviromentService::class,
+        \GoSafer\Provider\HelperService::class,
     ];
     public function __construct(string $basePath)
     {
