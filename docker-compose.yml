@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: tienkhach19
+        uid: 1000
+      context: ./
+      dockerfile: docker/Dockerfile
+    image: gosafer
+    container_name: gosafer-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - gosafer_network
+    
+  nginx:
+    image: nginx:alpine
+    container_name: gosafer-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d
+    networks:
+      - gosafer_network
+
+networks:
+  gosafer_network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
