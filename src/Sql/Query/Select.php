@@ -12,6 +12,11 @@ class Select extends Table
         $this->setTable($table);
         $this->select($columns);
     }
+
+    public function partName() : string
+    {
+        return 'SELECT';
+    }
     
     public function build() : string
     {
@@ -20,7 +25,7 @@ class Select extends Table
         if(is_string($this->columns)) {
             $columns = $this->columns;
         } else if(is_array($this->columns)) {
-            $columns = implode(',', $this->columns);
+            $columns = implode(', ', $this->columns);
         }
         return "$partName $columns FROM $this->table";
     }

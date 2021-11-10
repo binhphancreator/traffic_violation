@@ -17,7 +17,8 @@ class QueryBuilder implements BuilderInterface
 
     public function select($table = null, array $columns = null)
     {
-        return $this->injectBuilder(QueryFactory::createSelect($table, $columns));
+        $this->injectBuilder(QueryFactory::createSelect($table, $columns));
+        return $this;
     }
 
     public function get()
