@@ -4,6 +4,7 @@ namespace GoSafer\Http;
 
 use GoSafer\App\Application;
 use GoSafer\Routing\Router;
+use RuntimeException;
 
 class Handler 
 {
@@ -20,7 +21,7 @@ class Handler
         $response = $this->router->dispatch($request->url(), $request->method());
         if(is_null($response))
         {
-            $this->response = null;
+            $this->response = new ExceptionResponse(404, $response);
         }
         else if(is_string($response))
         {
@@ -30,9 +31,13 @@ class Handler
         {
             $this->response = new JsonResponse(200, $response);
         }
+        else if($response instanceof ResponseInterface)
+        {
+            $this->response = $response;
+        }
         else
         {
-            $this->response = new BaseResponse(200, $response);
+            throw new RuntimeException('The response is not supported');
         }
         return $this;
     }

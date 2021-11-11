@@ -6,7 +6,7 @@ class BaseResponse implements ResponseInterface
 {
     protected $response;
     protected $code;
-    public function __construct($code = 200, $response)
+    public function __construct($code = 200, $response = null)
     {
         $this->response = $response;
         $this->code = $code;
@@ -24,6 +24,6 @@ class BaseResponse implements ResponseInterface
 
     public function header()
     {
-        
+        header('Content-Type: text/html; charset=utf-8');
     }
 }
