@@ -9,12 +9,16 @@ class Application {
     private $services = [
         \GoSafer\Provider\EnviromentService::class,
         \GoSafer\Provider\HelperService::class,
+        \GoSafer\Provider\RoutingService::class,
+        \GoSafer\Provider\HttpService::class,
     ];
     public function __construct(string $basePath)
     {
-        $this->basePath = $basePath;
-        $this->bootService();
         self::$app = $this;
+        $this->basePath = $basePath;
+        $this->bindingService();
+        $this->register();
+        $this->boot();
     }
 
     public function getBasePath()
@@ -22,13 +26,32 @@ class Application {
         return $this->basePath;
     }
 
-    public function bootService()
+    public function path()
+    {
+
+    }
+
+    public function bindingService()
     {
         foreach($this->services as $service)
         {
-            $service = new $service($this);
-            $service->register();
-            $service->boot();
+            $this->bind($service, new $service($this));
+        }
+    }
+
+    public function register()
+    {
+        foreach($this->services as $service)
+        {
+            $this->make($service)->register();
+        }
+    }
+
+    public function boot()
+    {
+        foreach($this->services as $service)
+        {
+            $this->make($service)->boot();
         }
     }
 
@@ -40,5 +63,10 @@ class Application {
     public function make($name)
     {
         return $this->instances[$name];
+    }
+
+    public function close()
+    {
+        
     }
 }

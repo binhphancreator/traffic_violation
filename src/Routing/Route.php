@@ -3,6 +3,7 @@
 namespace GoSafer\Routing;
 
 use Closure;
+use GoSafer\Http\Request;
 use RuntimeException;
 
 class Route 
@@ -38,15 +39,15 @@ class Route
         return new Route('PATCH', $url, $callback);
     }
 
-    public function response() {
+    public function response(Request $request) {
         if(is_array($this->callback)) {
             if(count($this->callback) != 2) throw new RuntimeException('Route is not valid');
             $controllerName = $this->callback[0];
             $methodName = $this->callback[1];
-            return call_user_method_array($methodName, new $controllerName, []);
+            return call_user_method_array($methodName, new $controllerName, [$request]);
         }
         else if($this->callback instanceof Closure) {
-            return call_user_func_array($this->callback, []);
+            return call_user_func_array($this->callback, [$request]);
         }
         else {
             throw new RuntimeException('The callback is not supported');
