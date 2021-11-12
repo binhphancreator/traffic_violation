@@ -3,6 +3,7 @@
 namespace GoSafer\Http;
 
 use GoSafer\App\Application;
+use GoSafer\Renderer\View;
 use GoSafer\Routing\Router;
 use RuntimeException;
 
@@ -31,9 +32,9 @@ class Handler
         {
             $this->response = new JsonResponse(200, $response);
         }
-        else if($response instanceof ResponseInterface)
+        else if($response instanceof View)
         {
-            $this->response = $response;
+            $this->response = new ViewResponse(200, $response);
         }
         else
         {

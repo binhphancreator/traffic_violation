@@ -7,9 +7,9 @@
     <meta property="og:title" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
     <meta property="og:type" content="article">
     <meta property="og:description" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
-    <meta property="og:image" content="https://gosafer.xyz/resource/img/static.png">
-    <link rel="stylesheet" href="/resource/css/boootstrap.css">
-    <link rel="stylesheet" href="/resource/css/main.css">
+    <meta property="og:image" content="https://gosafer.xyz/img/static.png">
+    <link rel="stylesheet" href="/css/boootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>GoSafer | Trang tin tức, tra cứu vi phạm giao thông</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-lg">
                 <a class="navbar-brand fs-4 d-block flex-grow-1" href="/">
-                    <img src="/resource/img/gosafter.svg" alt="" srcset="">
+                    <img src="/img/gosafter.svg" alt="" srcset="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -71,7 +71,7 @@
             <div class="col-12">
                 <div class="card-news card-hoz">
                     <a href='/news.html' class="card-news-img mb-4">
-                        <img src="/resource/img/news1.jpg" alt="">
+                        <img src="/img/news1.jpg" alt="">
                     </a>
                     <div class="card-news-body">
                         <a href='/news.html' class="card-news-title">Chú chó 'nghiện' giao thông công cộng.</a>
@@ -85,9 +85,9 @@
         </div>
     </section>
     <div class="" include-html="footer"></div>
-    <script src="/resource/js/jquery.js"></script>
-    <script src="/resource/js/boootstrap5.js"></script>
-    <script src="/resource/js/chart.js"></script>
-    <script src="/resource/js/main.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/boootstrap5.js"></script>
+    <script src="/js/chart.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

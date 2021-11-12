@@ -1,5 +1,6 @@
 <?php
 
+use GoSafer\Renderer\View;
 use GoSafer\Routing\Router;
 
 function app($name)
@@ -15,4 +16,9 @@ function env($key, $default)
 function route() : Router
 {
     return app('router');
+}
+
+function view($name,array $data = null)
+{
+    return View::make($name, $data);
 }

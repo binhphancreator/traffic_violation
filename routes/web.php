@@ -7,5 +7,5 @@ route()->get('/hello', function(Request $request) {
 });
 
 route()->get('/', function(Request $request) {
-    return $request->all();
+    return view('index');
 });
