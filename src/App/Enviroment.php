@@ -14,7 +14,7 @@ class Enviroment
 
     public function readFileEnviroment()
     {
-        $envPath = $this->app->getBasePath()."/.env";
+        $envPath = $this->app->path('base')."/.env";
         if(!file_exists($envPath)) return;
         $file = fopen($envPath, "r");
         if($file) 

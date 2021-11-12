@@ -3,9 +3,9 @@
 namespace GoSafer\App;
 
 class Application {
-    private string $basePath = '';
     public static Application $app;
     private $instances = array();
+    private $path = array();
     private $services = [
         \GoSafer\Provider\EnviromentService::class,
         \GoSafer\Provider\HelperService::class,
@@ -14,21 +14,28 @@ class Application {
     ];
     public function __construct(string $basePath)
     {
-        self::$app = $this;
-        $this->basePath = $basePath;
+        $this->bindingApplication();
+        $this->bindingGlobalPath($basePath);
         $this->bindingService();
-        $this->register();
-        $this->boot();
     }
 
-    public function getBasePath()
+    public function bindingApplication()
     {
-        return $this->basePath;
+        self::$app = $this;
+        $this->bind('app', $this);
     }
 
-    public function path()
+    public function bindingGlobalPath($basePath)
     {
+        $this->path['base'] = $basePath;
+        $this->path['routes'] = $basePath."/routes";
+        $this->path['resource'] = $basePath."/resource";
+        $this->path['resource.view'] = $basePath."/resource/view";
+    }
 
+    public function path($key, $default = null)
+    {
+        return $this->path[$key] ?? $default;
     }
 
     public function bindingService()
@@ -37,6 +44,8 @@ class Application {
         {
             $this->bind($service, new $service($this));
         }
+        $this->register();
+        $this->boot();
     }
 
     public function register()

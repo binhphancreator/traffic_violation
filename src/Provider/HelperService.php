@@ -11,6 +11,6 @@ class HelperService extends Service
 
     public function boot()
     {
-        require_once($this->app->getBasePath().'/src/helper.php');
+        require_once($this->app->path('base').'/src/helper.php');
     }
 }

@@ -13,6 +13,7 @@ class RoutingService extends Service
 
     public function boot()
     {
-        require_once($this->app->getBasePath().'/routes/web.php');
+        require_once($this->app->path('routes').'/web.php');
+        require_once($this->app->path('routes').'/api.php');
     }
 }
