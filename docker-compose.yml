@@ -27,6 +27,23 @@ services:
       - ./docker/nginx:/etc/nginx/conf.d
     networks:
       - gosafer_network
+  db:
+    image: mariadb
+    container_name: gosafer-db
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: gosafer
+      MYSQL_ROOT_PASSWORD: binhphan2k
+      MYSQL_PASSWORD: binhphan2k
+      MYSQL_USER: gosafer
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+    networks:
+      - gosafer_network
 
 networks:
   gosafer_network:
