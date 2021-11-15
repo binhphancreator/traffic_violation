@@ -44,7 +44,9 @@ class Route
             if(count($this->callback) != 2) throw new RuntimeException('Route is not valid');
             $controllerName = $this->callback[0];
             $methodName = $this->callback[1];
-            return call_user_method_array($methodName, new $controllerName, [$request]);
+            if(!method_exists($controllerName, $methodName)) throw new RuntimeException('Method is not exist');
+            $controller = new $controllerName;
+            return $controller->$methodName($request);
         }
         else if($this->callback instanceof Closure) {
             return call_user_func_array($this->callback, [$request]);

@@ -3,7 +3,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "GoSafer\\": "src/"
+            "GoSafer\\": "src/",
+            "App\\": "app/"
         }
     },
     "authors": [
