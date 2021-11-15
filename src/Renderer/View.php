@@ -32,6 +32,7 @@ class View implements BaseView
     {
         if(!file_exists($this->app->path('resource.view')."/$this->name.gosafer.php"))
             throw new RuntimeException("The view is not exist");
+        extract($this->data);
         require_once ($this->app->path('resource.view')."/$this->name.gosafer.php");
     }
 }
