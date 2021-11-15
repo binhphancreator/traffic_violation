@@ -11,6 +11,7 @@ class Application {
         \GoSafer\Provider\HelperService::class,
         \GoSafer\Provider\RoutingService::class,
         \GoSafer\Provider\HttpService::class,
+        \GoSafer\Provider\DBService::class,
     ];
     public function __construct(string $basePath)
     {

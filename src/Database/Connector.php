@@ -3,6 +3,7 @@
 namespace GoSafer\Database;
 
 use GoSafer\Database\Connection;
+use PDO;
 
 class Connector
 {
@@ -43,8 +44,22 @@ class Connector
         $this->connection->exec($query);
     }
 
-    public function __destruct()
+    public function query(string $sql)
+    {
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+
+    public function close()
     {
         $this->connection = null;
+    }
+
+    public function lastInsertId()
+    {
+        return $this->connection->lastInsertId();
     }
 }

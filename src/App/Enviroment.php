@@ -23,7 +23,7 @@ class Enviroment
             {
                 $data = trim($line);
                 $data = explode("=", $line, 2);
-                if(!empty($data[0]) && isset($data[1])) $this->env[$data[0]] = $data[1];
+                if(!empty($data[0]) && isset($data[1])) $this->env[trim($data[0])] = trim($data[1]);
             }
             fclose($file);
         }
