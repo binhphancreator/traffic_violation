@@ -24,7 +24,7 @@ class Request
 
     public static function capture()
     {
-        return new Request($_ENV);
+        return new Request($_SERVER);
     }
 
     public function input($key) {

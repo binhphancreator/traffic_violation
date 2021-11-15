@@ -1,9 +1,6 @@
 <?php
 
 // Đăng ký cơ chế autoload bằng composer
-
-use GoSafer\Http\Request;
-
 require_once(__DIR__.'/../vendor/autoload.php');
 
 // Khởi tạo ứng dụng.
