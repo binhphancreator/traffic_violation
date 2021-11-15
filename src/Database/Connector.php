@@ -4,25 +4,10 @@ namespace GoSafer\Database;
 
 use GoSafer\Database\Connection;
 use PDO;
-
 class Connector
 {
-    /**
-     * The connection object
-     * @var PDO
-     */
     private \PDO $connection;
-
-    /**
-     * Last used parameters for the connection when constructor was called.
-     *
-     * @var array
-     */
     private array $connectionParams;
-
-    /**
-     *	Constructor that opens a new database connection
-     */
     public function __construct(array $connection_params)
     {
         $this->connectionParams = $connection_params;
@@ -44,11 +29,10 @@ class Connector
         $this->connection->exec($query);
     }
 
-    public function query(string $sql)
+    public function query(string $sql, array $params = [])
     {
         $stmt = $this->connection->prepare($sql);
-        $stmt->execute();
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->execute($params);
         $result = $stmt->fetchAll();
         return $result;
     }
