@@ -29,17 +29,6 @@ for (let i = 0; i < 20; i++) {
     )
 }
 
-function includeHtml() {
-    var element = document.querySelectorAll("[include-html]")
-    element.forEach(el => {
-        var nameComponent = el.getAttribute('include-html')
-        $(`[include-html='${nameComponent}']`).load(`/components/${nameComponent}.html`)
-    })
-
-}
-
-includeHtml();
-
 function counterNumberIncrease(number) {
     $('#numberOfViolation').animate({
         counter: number
