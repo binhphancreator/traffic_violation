@@ -18,7 +18,7 @@
     <nav class="container-lg mb-2" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item" aria-current="page"><a href="/">Trang Chủ</a></li>
-          <li class="breadcrumb-item active" aria-current="page"><a href="/">Tài liệu</a></li>
+          <li class="breadcrumb-item active" aria-current="page"><a href="/document">Tài liệu</a></li>
         </ol>
     </nav>
 
