@@ -39,6 +39,6 @@ class Select extends Table
     public function select(array $columns = null)
     {
         $this->columns = $columns == null ? '*' : $columns;
-        return this;
+        return $this;
     }
 }
