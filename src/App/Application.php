@@ -12,6 +12,7 @@ class Application {
         \GoSafer\Provider\RoutingService::class,
         \GoSafer\Provider\HttpService::class,
         \GoSafer\Provider\DBService::class,
+        \GoSafer\Provider\SessionService::class,
     ];
     public function __construct(string $basePath)
     {

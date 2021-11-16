@@ -1,5 +1,6 @@
 <?php
 
+use GoSafer\App\Session;
 use GoSafer\Renderer\View;
 use GoSafer\Routing\Router;
 
@@ -21,4 +22,9 @@ function route() : Router
 function view($name,array $data = null)
 {
     return View::make($name, $data);
+}
+
+function session() : Session
+{
+    return app('session');
 }
