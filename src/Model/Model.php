@@ -53,6 +53,8 @@ abstract class Model
 
     public function first()
     {
+        if(!isset($this->data))
+            $this->query();
         if(count($this->data) >= 1) {
             $this->data = $this->data[0];
             return $this;
@@ -60,11 +62,16 @@ abstract class Model
         return null;
     }
 
+    public function query()
+    {
+        $query = $this->builder->get();
+        $this->data = $this->connector->query($query);
+    }
+
     public function get()
     {
         if($this->single) return $this->data;
-        $query = $this->builder->get();
-        $this->data = $this->connector->query($query);
+        $this->query();
         return $this->data;
     }
 }

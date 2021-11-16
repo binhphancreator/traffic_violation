@@ -13,12 +13,17 @@ class Request
     }
 
     private function explodeQuery(){
-        $query = $this->query();
-        if(!$query) return;
-        $query = explode('&', $query);
-        foreach ( $query as $data ) {
-            $data = explode('=', $data);
-            $this->input[$data[0]] = $data[1];
+        $method = $this->method();
+        switch($method)
+        {
+            case 'GET':
+                $this->input = $_GET;
+                break;
+            case 'POST':
+                $this->input = $_POST;
+                break;
+            default:
+                break;
         }
     }
 
@@ -54,5 +59,10 @@ class Request
 
     public function host() {
         return $this->server['HTTP_HOST'] ?? null;
+    }
+
+    public function __get($key)
+    {
+        return $this->input[$key] ?? null;
     }
 }

@@ -2,6 +2,7 @@
 
 use GoSafer\App\Auth;
 use GoSafer\App\Session;
+use GoSafer\Http\RedirectResponse;
 use GoSafer\Renderer\View;
 use GoSafer\Routing\Router;
 
@@ -33,4 +34,9 @@ function session() : Session
 function auth() : Auth
 {
     return app('auth');
+}
+
+function redirect($url, $code = 301)
+{
+    return new RedirectResponse($code, $url);
 }

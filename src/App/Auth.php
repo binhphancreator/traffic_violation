@@ -26,7 +26,10 @@ class Auth
             $this->session->set('auth', true);
             $this->session->set('email', $email);
             $this->user = $user;
+            return true;
         }
+
+        return false;
     }
 
     public function logout()

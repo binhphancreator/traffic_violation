@@ -36,6 +36,10 @@ class Handler
         {
             $this->response = new ViewResponse(200, $response);
         }
+        else if($response instanceof BaseResponse)
+        {
+            $this->response = $response;
+        }
         else
         {
             throw new RuntimeException('The response is not supported');
