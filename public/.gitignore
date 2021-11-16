@@ -1,0 +1,6 @@
+*
+!.htaccess
+!favicon.ico
+!index.php
+!.well-known/
+!.gitignore
