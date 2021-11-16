@@ -9,10 +9,11 @@ class SessionService extends Service
     public function register()
     {
         session_start();
+        $this->app->bind('session', new Session);
     }
 
     public function boot()
     {
-        $this->app->bind('session', new Session);
+        
     }
 }

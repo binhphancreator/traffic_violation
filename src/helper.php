@@ -1,5 +1,6 @@
 <?php
 
+use GoSafer\App\Auth;
 use GoSafer\App\Session;
 use GoSafer\Renderer\View;
 use GoSafer\Routing\Router;
@@ -27,4 +28,9 @@ function view($name,array $data = null)
 function session() : Session
 {
     return app('session');
+}
+
+function auth() : Auth
+{
+    return app('auth');
 }
