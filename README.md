@@ -8,3 +8,8 @@ ln -s -r ./resource/css ./public/
 ln -s -r ./resource/js ./public/
 ln -s -r ./resource/img ./public/
 ```
+
+- Dump dữ liệu:
+```
+mysqldump -u gosafer -p gosafer --no-data > sql/gosafer.sql
+```

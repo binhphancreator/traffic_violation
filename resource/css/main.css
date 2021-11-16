@@ -156,7 +156,7 @@ header.header-home .overlay {
     left: 0;
     bottom: 0;
     width: 100vw;
-    background-image: url('/resource/img/map.jpeg');
+    background-image: url('/img/map.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

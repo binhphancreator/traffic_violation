@@ -40,8 +40,10 @@ services:
       MYSQL_USER: gosafer
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+    working_dir: /var/www/
     volumes:
       - dbdata:/var/lib/mysql/
+      - ./:/var/www
     networks:
       - gosafer_network
 
