@@ -4,6 +4,7 @@ namespace GoSafer\Sql\Builder;
 
 use GoSafer\Sql\Query\QueryFactory;
 use GoSafer\Sql\Query\QueryInterface;
+use GoSafer\Sql\Query\Select;
 use RuntimeException;
 
 class QueryBuilder implements BuilderInterface
@@ -25,5 +26,19 @@ class QueryBuilder implements BuilderInterface
     {
         if($this->query == null) throw new RuntimeException('Query Instance has not been intialize');
         return $this->query->build();
+    }
+
+    public function __call($method, $arguments)
+    {
+        switch($method)
+        {
+            case 'where':
+                call_user_func_array(array($this->query, $method), $arguments);
+                return $this;
+                break;
+            default:
+                throw new RuntimeException('Method not found');
+                break;
+        }
     }
 }
