@@ -9,6 +9,7 @@ abstract class Model
 {
     protected $table;
     protected $primaryKey = 'id';
+    protected array $data;
     private Connector $connector;
     private QueryBuilder $builder;
 
@@ -22,5 +23,17 @@ abstract class Model
     {
         $query = $this->builder->select($this->table)->get();
         return $this->connector->query($query);
+    }
+
+    public function find($id)
+    {
+        $query = $this->builder->select($this->table)->where($this->primaryKey, $id)->get();
+        $this->data = $this->connector->query($query);
+        return $this;
+    }
+
+    public function get()
+    {
+        return $this->data;
     }
 }
