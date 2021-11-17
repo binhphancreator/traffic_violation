@@ -34,6 +34,12 @@ class QueryBuilder implements BuilderInterface
         return $this;
     }
 
+    public function update($table, array $data)
+    {
+        $this->injectBuilder(QueryFactory::createUpdate($table, $data));
+        return $this;
+    }
+
     public function get()
     {
         if($this->query == null) throw new RuntimeException('Query Instance has not been intialize');

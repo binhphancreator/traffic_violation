@@ -14,6 +14,7 @@ abstract class Model
     private Connector $connector;
     private QueryBuilder $builder;
     private $single = false;
+    private $updated = [];
 
     public function __construct()
     {
@@ -25,6 +26,12 @@ abstract class Model
     public function __get($key)
     {
         return $this->data[$key] ?? null;
+    }
+
+    public function __set($key, $value)
+    {
+        $this->updated[$key] = $value;
+        $this->data[$key] = $value;
     }
 
     public function all()
@@ -59,6 +66,25 @@ abstract class Model
         $query = $this->builder->delete($this->table)->where($this->primaryKey, $this->data[$this->primaryKey])->get();
         $this->connector->exec($query);
         return $this;
+    }
+
+    public function update(array $data = null)
+    {
+        $this->updated = $data ?? $this->updated;
+        if(!count($this->updated)) return;
+        $query = $this->builder->update($this->table, $this->updated)->where($this->primaryKey, $this->data[$this->primaryKey])->get();
+        $this->connector->exec($query);
+        $this->reload();
+        return $this;
+    }
+
+    private function reload()
+    {
+        foreach($this->updated as $key => $value)
+        {
+            $this->data[$key] = $value;
+        }
+        $this->updated = [];
     }
 
     public function where(...$args)

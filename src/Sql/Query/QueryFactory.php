@@ -18,4 +18,9 @@ final class QueryFactory
     {
         return new Delete($table);
     }
+
+    public static function createUpdate($table = null, array $data = null) : Update
+    {
+        return new Update($table, $data);
+    }
 }
