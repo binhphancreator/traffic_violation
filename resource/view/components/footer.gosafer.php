@@ -19,11 +19,11 @@
             <div class="col-12 col-sm-6 my-1">
                 <nav class="mb-2" aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-sm-end">
-                      <li class="breadcrumb-item" aria-current="page"><a href="/introduction.html">Giới thiệu</a></li>
-                      <li class="breadcrumb-item" aria-current="page"><a href="/terms.html">Điều khoản</a></li>
-                      <li class="breadcrumb-item" aria-current="page"><a href="/document.html">Tài liệu</a></li>
-                      <li class="breadcrumb-item" aria-current="page"><a href="/news-page.html">Tin tức</a></li>
-                      <li class="breadcrumb-item" aria-current="page"><a href="/lookup-violation.html">Tra cứu</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/introduction">Giới thiệu</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/terms">Điều khoản</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/document">Tài liệu</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/news-page">Tin tức</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/lookup-violation">Tra cứu</a></li>
                     </ol>
                 </nav>
                 <div class="d-flex align-items-center mb-2 justify-content-sm-end">

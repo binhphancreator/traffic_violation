@@ -1,30 +1,4 @@
 <header class="py-2 position-relative mb-2">
     <div class="overlay"></div>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-lg">
-            <a class="navbar-brand fs-4 d-block flex-grow-1" href="/">
-                <img src="/img/gosafter.svg" alt="" srcset="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/lookup-violation.html">
-                          Tra cứu
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="/lookup-violation.html">Tra cứu vi phạm</a></li>
-                          <li><a class="dropdown-item" href="/lookup-violation.html">Tra cứu biển số xe</a></li>
-                        </ul>
-                    </div>
-                    <a class="nav-link" href="/document.html">Tài liệu</a>
-                    <a class="nav-link" href="/terms.html">Điều khoản</a>
-                    <a class="btn-rounded-left" href="/news-page.html">Tin tức</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php view('components/nav')->render() ?>
 </header>

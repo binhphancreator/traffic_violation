@@ -8,3 +8,4 @@ route()->get('/', [HomeController::class, 'index']);
 route()->get('/document', [DocumentController::class, 'index']);
 route()->get('/login', [LoginController::class, 'index']);
 route()->post('/login', [LoginController::class, 'login']);
+route()->get('/logout', [LoginController::class, 'logout']);

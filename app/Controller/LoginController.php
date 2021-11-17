@@ -22,4 +22,10 @@ class LoginController extends BaseController
         $status = auth()->login($request->email, $request->password);
         return $status ? redirect('/') : redirect('/login')->with(['error' => 'Sai tài khoản hoặc mật khẩu']);
     }
+
+    public function logout(Request $request)
+    {
+        auth()->logout();
+        return redirect('/');
+    }
 }

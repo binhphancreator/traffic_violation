@@ -13,50 +13,7 @@
     <title>GoSafer | Trang tin tức, tra cứu vi phạm giao thông</title>
 </head>
 <body>
-    <header class="py-2 position-relative mb-5 header-home">
-        <div id="map" class="overlay"></div>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-lg">
-                <a class="navbar-brand fs-4 d-block flex-grow-1" href="/">
-                    <img src="/img/gosafter.svg" alt="" srcset="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/lookup-violation.html">
-                              Tra cứu
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="/lookup-violation.html">Tra cứu vi phạm</a></li>
-                              <li><a class="dropdown-item" href="/lookup-violation.html">Tra cứu biển số xe</a></li>
-                            </ul>
-                        </div>
-                        <a class="nav-link" href="/document.html">Tài liệu</a>
-                        <a class="nav-link" href="/terms.html">Điều khoản</a>
-                        <a class="btn-rounded-left" href="/news-page.html">Tin tức</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="header-bottom container-lg mt-5 overflow-hidden">
-            <div class="mask"></div>
-            <div>
-                <div class="mb-5">
-                    <h1 class="text-secondary fs-1 mb-4"><span id="numberOfViolation">6805 </span> <span class="fs-3">vụ tai nạn</span></h1>
-                    <p class="header-bottom-content text-secondary mb-0">Hãy tuân thủ luật giao thông để  tránh mất mát cho gia đình và xã hội. Bạn có thể tra cứu lỗi vi phạm của mình trên GoSafer!</p>
-                </div>
-                <div class="d-flex flex-wrap align-items-center justify-content-center mb-4">
-                    <button data-city='hn'  class="p-2 btn-rounded-left text-light me-4 active">Hà Nội</button>
-                    <button data-city='hcm' class="p-2 btn-rounded-left text-light me-4">Hồ Chí Minh</button>
-                    <button data-city='all' class="p-2 btn-rounded-left text-light">Toàn Quốc</button>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php view('components/header')->render() ?>
     <section class="charts container-lg mb-5">
         <h2 class="chart-title">Dữ liệu vi phạm giao thông theo năm.</h2>
         <canvas id="chart-violation-yearly"></canvas>
