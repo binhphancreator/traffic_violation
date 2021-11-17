@@ -2,11 +2,8 @@
 
 namespace GoSafer\Sql\Query;
 
-use RuntimeException;
-
 class Select extends Table
 {
-    protected $table;
     private $columns;
     private Where $where;
 
