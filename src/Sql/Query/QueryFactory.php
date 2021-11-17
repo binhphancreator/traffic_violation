@@ -13,4 +13,9 @@ final class QueryFactory
     {
         return new Insert($table, $data);
     }
+
+    public static function createDelete($table = null) : Delete
+    {
+        return new Delete($table);
+    }
 }

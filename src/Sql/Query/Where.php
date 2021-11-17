@@ -14,7 +14,8 @@ class Where extends AbstractBaseQuery
         foreach($this->conditions as $index => $condition)
         {
             if($index > 0) $sql = $sql." AND ";
-            $sql = $sql."$condition[0] $condition[1] '$condition[2]'";
+            $value = is_string($condition[2]) ? "'$condition[2]'" : $condition[2];
+            $sql = $sql."$condition[0] $condition[1] $value";
         }
         return $sql;
     }

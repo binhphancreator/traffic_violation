@@ -4,6 +4,7 @@ namespace GoSafer\Model;
 
 use GoSafer\Database\Connector;
 use GoSafer\Sql\Builder\QueryBuilder;
+use RuntimeException;
 
 abstract class Model 
 {
@@ -50,6 +51,14 @@ abstract class Model
         $this->connector->exec($query);
         $id = $this->connector->lastInsertId();
         return $this->find($id);
+    }
+
+    public function delete()
+    {
+        if(!isset($this->data)) throw new RuntimeException('The data of model is null');
+        $query = $this->builder->delete($this->table)->where($this->primaryKey, $this->data[$this->primaryKey])->get();
+        $this->connector->exec($query);
+        return $this;
     }
 
     public function where(...$args)

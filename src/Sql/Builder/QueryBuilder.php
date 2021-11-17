@@ -28,6 +28,12 @@ class QueryBuilder implements BuilderInterface
         return $this;
     }
 
+    public function delete($table)
+    {
+        $this->injectBuilder(QueryFactory::createDelete($table));
+        return $this;
+    }
+
     public function get()
     {
         if($this->query == null) throw new RuntimeException('Query Instance has not been intialize');
