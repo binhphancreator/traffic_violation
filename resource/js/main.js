@@ -4,7 +4,7 @@ for (let i = 0; i < 5; i++) {
             <div class="col-xl-3 col-md-4 col-sm-6 col-12 my-1"> \
                 <div class="card-news"> \
                     <a href="/news.html" class="card-news-img mb-4"> \
-                        <img src="/resource/img/news1.jpg" alt=""> \
+                        <img src="/img/news1.jpg" alt=""> \
                     </a> \
                     <a href="/news.html" class="card-news-title">Chú chó \'nghiện\' giao thông công cộng.</a> \
                     <p class="card-news-content text-secondary mb-0">Trong chuyến phà chở khách đông đúc ở Istanbul, mọi con mắt đều hướng về một chú chó đang ngắm nhìn phong cảnh từ cửa sổ.</p> \
@@ -28,17 +28,6 @@ for (let i = 0; i < 20; i++) {
         `
     )
 }
-
-function includeHtml() {
-    var element = document.querySelectorAll("[include-html]")
-    element.forEach(el => {
-        var nameComponent = el.getAttribute('include-html')
-        $(`[include-html='${nameComponent}']`).load(`/components/${nameComponent}.html`)
-    })
-
-}
-
-includeHtml();
 
 function counterNumberIncrease(number) {
     $('#numberOfViolation').animate({
