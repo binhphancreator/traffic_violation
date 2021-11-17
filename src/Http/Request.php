@@ -2,6 +2,9 @@
 
 namespace GoSafer\Http;
 
+use GoSafer\Storage\FileUpload;
+use RuntimeException;
+
 class Request 
 {
     private array $server;
@@ -64,5 +67,11 @@ class Request
     public function __get($key)
     {
         return $this->input[$key] ?? null;
+    }
+
+    public function file($file) : FileUpload
+    {
+        if(!isset($_FILES[$file])) return null;
+        return new FileUpload($_FILES[$file]);
     }
 }
