@@ -8,4 +8,9 @@ final class QueryFactory
     {
         return new Select($table, $columns);
     }
+
+    public static function createInsert($table = null, array $data = null) : Insert
+    {
+        return new Insert($table, $data);
+    }
 }

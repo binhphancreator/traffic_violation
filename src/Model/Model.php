@@ -44,6 +44,14 @@ abstract class Model
         return null;
     }
 
+    public function create(array $data = null)
+    {
+        $query = $this->builder->insert($this->table, $data)->get();
+        $this->connector->exec($query);
+        $id = $this->connector->lastInsertId();
+        return $this->find($id);
+    }
+
     public function where(...$args)
     {
         $this->single = false;
