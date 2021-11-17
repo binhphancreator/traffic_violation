@@ -10,16 +10,25 @@
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/lookup-violation">
-                        Tra cứu
+                    <a class="nav-link dropdown-toggle" href="#">
+                        Quản lý vi phạm
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/lookup-violation">Tra cứu vi phạm</a></li>
+                        <li><a class="dropdown-item" href="/reports/add">Thêm mới biên bản</a></li>
                     </ul>
                 </div>
-                <a class="nav-link" href="/document">Tài liệu</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/document">
+                        Tài liệu
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/document">Xem tài liệu</a></li>
+                        <li><a class="dropdown-item" href="/document/add">Thêm mới tài liệu</a></li>
+                    </ul>
+                </div>
                 <a class="nav-link" href="/news-page">Tin tức</a>
-                <a class="btn-rounded-left" href="/login">Đăng nhập</a>
+                <a class="btn-rounded-left" href="/logout">Đăng xuất</a>'
             </div>
         </div>
     </div>

@@ -1,6 +1,9 @@
 <header class="py-2 position-relative mb-5 header-home">
     <div id="map" class="overlay"></div>
-    <?php view('components/nav')->render() ?>
+    <?php
+        $nav = auth()->loggined() ? 'components/nav-admin' : 'components/nav';
+        view($nav)->render(); 
+    ?>
     <div class="header-bottom container-lg mt-5 overflow-hidden">
         <div class="mask"></div>
         <div>
