@@ -16,7 +16,7 @@ class Select extends Table
         $this->select($columns);
     }
 
-    public function partName() : string
+    public function part() : string
     {
         return 'SELECT';
     }
@@ -32,13 +32,13 @@ class Select extends Table
     public function buildSelect() : string
     {
         $columns = '*';
-        $partName = $this->partName();
+        $part = $this->part();
         if(is_string($this->columns)) {
             $columns = $this->columns;
         } else if(is_array($this->columns)) {
             $columns = implode(', ', $this->columns);
         }
-        return "$partName $columns FROM $this->table";
+        return "$part $columns FROM $this->table";
     }
 
     public function buildWhere() : string

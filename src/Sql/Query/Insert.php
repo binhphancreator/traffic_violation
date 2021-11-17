@@ -11,18 +11,18 @@ class Insert extends AbstractBaseQuery
         $this->data = $data ?? [];
     }
 
-    public function partName() : string
+    public function part() : string
     {
         return 'INSERT INTO';
     }
 
     public function build() : string
     {
-        $partName = $this->partName();
+        $part = $this->part();
         $table = $this->table;
         $columns = $this->buildColumn();
         $values = $this->buildValue();
-        $sql = "$partName $table $columns VALUES $values";
+        $sql = "$part $table $columns VALUES $values";
         return $sql;
     }
 
