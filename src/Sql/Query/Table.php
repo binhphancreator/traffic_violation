@@ -4,6 +4,8 @@ namespace GoSafer\Sql\Query;
 
 class Table extends AbstractBaseQuery
 {
+    protected $table;
+    
     public function part(): string
     {
         return 'TABLE';

@@ -2,7 +2,7 @@
 
 namespace GoSafer\Sql\Query;
 
-class Insert extends AbstractBaseQuery
+class Insert extends Table
 {
     private array $data;
     public function __construct($table, $data)

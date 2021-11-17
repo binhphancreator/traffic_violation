@@ -8,12 +8,13 @@ class Select extends Table
 {
     protected $table;
     private $columns;
-    private $conditions = [];
+    private Where $where;
 
     public function __construct($table = null, array $columns = null)
     {
-        $this->setTable($table);
+        $this->table = $table;
         $this->select($columns);
+        $this->where = new Where;
     }
 
     public function part() : string
@@ -43,20 +44,7 @@ class Select extends Table
 
     public function buildWhere() : string
     {
-        $sql = '';
-        if(!count($this->conditions)) return '';
-        foreach($this->conditions as $index => $condition)
-        {
-            if($index > 0) $sql = $sql." AND ";
-            $sql = $sql."$condition[0] $condition[1] '$condition[2]'";
-        }
-        return $sql;
-    }
-
-    public function setTable($table)
-    {
-        $this->table = $table;
-        return $this;
+        return $this->where->build();
     }
 
     public function select(array $columns = null)
@@ -67,20 +55,6 @@ class Select extends Table
 
     public function where(...$args)
     {
-        $nargs = count($args);
-        switch($nargs)
-        {
-            case 2:
-                $this->conditions[] = array($args[0], '=', $args[1]);
-                break;
-            case 3:
-                $this->conditions[] = $args; 
-                break;
-            case 4: 
-                break;
-            default: 
-                throw new RuntimeException('Argument is not valid');
-                break;
-        }
+        call_user_func_array(array($this->where, 'where'), $args);
     }
 }
