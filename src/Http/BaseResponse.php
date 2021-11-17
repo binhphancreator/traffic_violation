@@ -26,4 +26,10 @@ class BaseResponse implements ResponseInterface
     {
         header('Content-Type: text/html; charset=utf-8');
     }
+
+    public function with($data)
+    {
+        session()->flash($data);
+        return $this;
+    }
 }

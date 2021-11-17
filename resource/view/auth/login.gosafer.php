@@ -35,6 +35,7 @@
                         <input type="password" placeholder="Mật khẩu" class="form-control" id="passwordInput" name="password">
                     </div>
                 </div>
+                <?php if(session()->old('error')) { $error = session()->old('error'); echo "<div class=\"alert-danger p-2 mb-4\">$error</div>";}  ?>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn-rounded-left p-2" href="/lookup-violation.html">Đăng nhập</button>
                 </div>

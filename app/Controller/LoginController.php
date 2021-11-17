@@ -20,6 +20,6 @@ class LoginController extends BaseController
         if(auth()->loggined()) 
             return redirect('/');
         $status = auth()->login($request->email, $request->password);
-        return $status ? redirect('/') : redirect('/login');
+        return $status ? redirect('/') : redirect('/login')->with(['error' => 'Sai tài khoản hoặc mật khẩu']);
     }
 }
