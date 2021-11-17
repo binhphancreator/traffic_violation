@@ -3,6 +3,7 @@
 namespace GoSafer\Routing;
 
 use GoSafer\App\Application;
+use GoSafer\Http\ExceptionResponse;
 use GoSafer\Http\Request;
 
 class Router 
@@ -43,7 +44,7 @@ class Router
 
     public function dispatch($url, $method) {
         $id = "$url*$method";
-        if(!isset($this->routes[$id])) return null;
+        if(!isset($this->routes[$id])) return new ExceptionResponse(404);
         return $this->routes[$id]->response($this->app->make('request'));
     }
 }

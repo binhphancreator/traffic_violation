@@ -46,7 +46,7 @@ class Route
             $methodName = $this->callback[1];
             if(!method_exists($controllerName, $methodName)) throw new RuntimeException('Method is not exist');
             $controller = new $controllerName;
-            return $controller->$methodName($request);
+            return call_user_func_array(array($controller, $methodName), [$request]);
         }
         else if($this->callback instanceof Closure) {
             return call_user_func_array($this->callback, [$request]);
