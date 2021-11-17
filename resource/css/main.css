@@ -403,3 +403,9 @@ footer .breadcrumb-item+.breadcrumb-item::before {
     height: 3rem;
     object-fit: contain;
 }
+
+/* Resize None */
+
+.resize-none {
+    resize: none;
+}
