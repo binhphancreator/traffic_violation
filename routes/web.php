@@ -12,3 +12,4 @@ route()->post('/login', [LoginController::class, 'login']);
 route()->get('/logout', [LoginController::class, 'logout']);
 route()->get('/reports/add', [ReportController::class, 'showCreateForm']);
 route()->post('/reports/add', [ReportController::class, 'create']);
+route()->get('/reports/lookup', [ReportController::class, 'showLookupForm']);

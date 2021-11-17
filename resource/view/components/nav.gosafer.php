@@ -10,11 +10,11 @@
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
                 <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/lookup-violation">
+                    <a class="nav-link dropdown-toggle" href="/reports/lookup">
                         Tra cứu
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/lookup-violation">Tra cứu vi phạm</a></li>
+                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu vi phạm</a></li>
                     </ul>
                 </div>
                 <a class="nav-link" href="/document">Tài liệu</a>

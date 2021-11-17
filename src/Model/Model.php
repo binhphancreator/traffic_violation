@@ -99,6 +99,7 @@ abstract class Model
         if(!isset($this->data))
             $this->query();
         if(count($this->data) >= 1) {
+            $this->single = true;
             $this->data = $this->data[0];
             return $this;
         }
