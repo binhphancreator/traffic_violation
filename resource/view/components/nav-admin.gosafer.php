@@ -27,7 +27,7 @@
                         <li><a class="dropdown-item" href="/document/add">Thêm mới tài liệu</a></li>
                     </ul>
                 </div>
-                <a class="nav-link" href="/news-page">Tin tức</a>
+                <a class="nav-link" href="/news">Tin tức</a>
                 <a class="btn-rounded-left" href="/logout">Đăng xuất</a>'
             </div>
         </div>

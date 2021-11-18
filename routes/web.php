@@ -3,6 +3,7 @@
 use App\Controller\DocumentController;
 use App\Controller\HomeController;
 use App\Controller\LoginController;
+use App\Controller\NewsController;
 use App\Controller\ReportController;
 
 route()->get('/', [HomeController::class, 'index']);
@@ -21,3 +22,6 @@ route()->get('/logout', [LoginController::class, 'logout']);
 route()->get('/reports/add', [ReportController::class, 'showCreateForm']);
 route()->post('/reports/add', [ReportController::class, 'create']);
 route()->get('/reports/lookup', [ReportController::class, 'showLookupForm']);
+
+route()->get('/news', [NewsController::class, 'index']);
+route()->get('/news/detail', [NewsController::class, 'show']);

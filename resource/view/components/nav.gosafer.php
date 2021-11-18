@@ -18,7 +18,7 @@
                     </ul>
                 </div>
                 <a class="nav-link" href="/document">Tài liệu</a>
-                <a class="nav-link" href="/news-page">Tin tức</a>
+                <a class="nav-link" href="/news">Tin tức</a>
                 <a class="btn-rounded-left" href="/login">Đăng nhập</a>
             </div>
         </div>
