@@ -7,13 +7,13 @@
     <meta property="og:title" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
     <meta property="og:type" content="article">
     <meta property="og:description" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
-    <meta property="og:image" content="https://gosafer.xyz/resource/img/static.png">
-    <link rel="stylesheet" href="/resource/css/boootstrap.css">
-    <link rel="stylesheet" href="/resource/css/main.css">
+    <meta property="og:image" content="https://gosafer.xyz/img/static.png">
+    <link rel="stylesheet" href="/css/boootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>GoSafer | Điều khoản và điều kiện sử dụng GoSafer</title>
 </head>
 <body>
-    <div class="" include-html="header-page"></div>
+    <?php view('components/header-page')->render() ?>
 
     <nav class="container-lg mb-2" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -23,18 +23,19 @@
     </nav>
 
     <section class="main-content container-lg mb-4">
-        <h1 class="">Giới thiệu về GoSafer</h1>
-        <div class="article">
-            <p><b>GoSafer là gì</b></p> 
+        <h1 class="">Điều khoản và điều kiện sử dụng GoSafer</h1>
+        <div class="article"> 
+            <p><b>Bằng việc sử dụng các Dịch vụ trên GoSafer, tổ chức, cá nhân sử dụng mặc nhiên chấp thuận và cam kết thực hiện các điều khoản và điều kiện sử dụng sau đây:</b></p> 
+            <p><b>1. Tổ chức, cá nhân sử dụng GoSafer có trách nhiệm: </b></p> 
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <p><b>Sứ mệnh của GoSafer?</b></p>
+            <p><b>2. Tổ chức, cá nhân sử dụng dịch vụ trên GoSafer không được thực hiện một trong các hành vi sau: </b></p> 
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        <div>
+            <p>Trong trường hợp sửa đổi nội dung các điều khoản và điều kiện sử dụng GoSafer, các nội dung sửa đổi sẽ được thông báo trên Cổng. Người sử dụng tiếp tục sử dụng và tiếp tục thực hiện các yêu cầu dịch vụ trên GoSafer có nghĩa là đã chấp nhận các sửa đổi đó.</p> 
+           </div>
     </section>
-    <div class="" include-html="footer"></div>
+    <?php view('components/footer')->render() ?>
 
-    <script src="/resource/js/jquery.js"></script>
-    <script src="/resource/js/boootstrap5.js"></script>
-    <script src="/resource/js/main.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/boootstrap5.js"></script>
 </body>
 </html>

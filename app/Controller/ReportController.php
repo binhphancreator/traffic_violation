@@ -21,4 +21,20 @@ class ReportController extends BaseController
         $report->create($data);
         return redirect('/reports/add')->with(['notify' => 'Thêm mới biên bản thành công']);
     }
+
+    public function showLookupForm(Request $request)
+    {
+        if(!auth()->loggined()) return redirect('/');
+        return view('report/lookup');
+    }
+
+    public function lookup(Request $request)
+    {
+        $report = (new Report())->where('code', $request->code)->first();
+        $response = [
+            'status' => $report!=null,
+            'data' => $report ? $report->get() : null,
+        ];
+        return $response;
+    }
 }
