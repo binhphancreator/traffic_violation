@@ -7,7 +7,7 @@
 ln -s -r ./resource/css ./public/
 ln -s -r ./resource/js ./public/
 ln -s -r ./resource/img ./public/
-ln -s -r ./storage/public/* ./public/
+ln -s -r ./storage/file ./public/
 ```
 
 - Dump dữ liệu:

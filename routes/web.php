@@ -10,6 +10,9 @@ route()->get('/', [HomeController::class, 'index']);
 route()->get('/document', [DocumentController::class, 'index']);
 route()->get('/document/add', [DocumentController::class, 'add']);
 route()->post('/document/add', [DocumentController::class, 'create']);
+route()->post('/document/delete', [DocumentController::class, 'delete']);
+route()->get('/document/update', [DocumentController::class, 'showFormUpdate']);
+route()->post('/document/update', [DocumentController::class, 'update']);
 
 route()->get('/login', [LoginController::class, 'index']);
 route()->post('/login', [LoginController::class, 'login']);
