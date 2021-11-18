@@ -25,20 +25,6 @@
     <section class="news container-lg mb-5">
         <h2 class="news-title">Tin giao thông nổi bật</h2>
         <div class="row" id="newsList">
-            <div class="col-12">
-                <div class="card-news card-hoz">
-                    <a href='/news.html' class="card-news-img mb-4">
-                        <img src="/img/news1.jpg" alt="">
-                    </a>
-                    <div class="card-news-body">
-                        <a href='/news.html' class="card-news-title">Chú chó 'nghiện' giao thông công cộng.</a>
-                        <p class="card-news-content text-secondary">Trong chuyến phà chở khách đông đúc ở Istanbul, mọi con mắt đều hướng về một chú chó đang ngắm nhìn phong cảnh từ cửa sổ.</p>
-                        <div class="card-news-relate">
-                            <div class="mb-1"><a href='/news.html' class="">Chú chó 'nghiện' giao thông công cộng.Chú chó 'nghiện' giao thông công cộng.</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <div class="" include-html="footer"></div>
@@ -46,5 +32,9 @@
     <script src="/js/boootstrap5.js"></script>
     <script src="/js/chart.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+        const news = <?php echo json_encode($news) ?>;
+    </script>
+    <script src="/js/news.js"></script>
 </body>
 </html>
