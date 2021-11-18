@@ -7,6 +7,7 @@ use App\Controller\NewsController;
 use App\Controller\ReportController;
 
 route()->get('/', [HomeController::class, 'index']);
+route()->get('/introduction', [HomeController::class, 'introduction']);
 
 route()->get('/document', [DocumentController::class, 'index']);
 route()->get('/document/add', [DocumentController::class, 'add']);

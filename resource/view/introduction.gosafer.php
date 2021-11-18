@@ -7,13 +7,13 @@
     <meta property="og:title" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
     <meta property="og:type" content="article">
     <meta property="og:description" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
-    <meta property="og:image" content="https://gosafer.xyz/resource/img/static.png">
-    <link rel="stylesheet" href="/resource/css/boootstrap.css">
-    <link rel="stylesheet" href="/resource/css/main.css">
+    <meta property="og:image" content="https://gosafer.xyz/img/static.png">
+    <link rel="stylesheet" href="/css/boootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>GoSafer | Điều khoản và điều kiện sử dụng GoSafer</title>
 </head>
 <body>
-    <div class="" include-html="header-page"></div>
+    <?php view('components/header-page')->render() ?>
 
     <nav class="container-lg mb-2" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -31,10 +31,9 @@
             <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
         <div>
     </section>
-    <div class="" include-html="footer"></div>
+    <?php view('components/footer')->render() ?>
 
-    <script src="/resource/js/jquery.js"></script>
-    <script src="/resource/js/boootstrap5.js"></script>
-    <script src="/resource/js/main.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/boootstrap5.js"></script>
 </body>
 </html>

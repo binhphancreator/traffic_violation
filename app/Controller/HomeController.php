@@ -13,4 +13,9 @@ class HomeController extends BaseController
         $news = (new News())->all();
         return view('index', ['news' => $news]);
     }
+
+    public function introduction(Request $request)
+    {
+        return view('introduction');
+    }
 }
