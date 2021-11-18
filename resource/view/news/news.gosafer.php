@@ -46,6 +46,9 @@
 
     <script src="/js/jquery.js"></script>
     <script src="/js/boootstrap5.js"></script>
-    <script src="/js/main.js"></script>
+    <script>
+        const news = <?php echo json_encode($news) ?>
+    </script>
+    <script src="/js/news.js"></script>
 </body>
 </html>
