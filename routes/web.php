@@ -8,6 +8,7 @@ use App\Controller\ReportController;
 
 route()->get('/', [HomeController::class, 'index']);
 route()->get('/introduction', [HomeController::class, 'introduction']);
+route()->get('/terms', [HomeController::class, 'terms']);
 
 route()->get('/document', [DocumentController::class, 'index']);
 route()->get('/document/add', [DocumentController::class, 'add']);

@@ -7,13 +7,13 @@
     <meta property="og:title" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
     <meta property="og:type" content="article">
     <meta property="og:description" content="GoSafer | Trang tin tức, tra cứu vi phạm giao thông">
-    <meta property="og:image" content="https://gosafer.xyz/resource/img/static.png">
-    <link rel="stylesheet" href="/resource/css/boootstrap.css">
-    <link rel="stylesheet" href="/resource/css/main.css">
+    <meta property="og:image" content="https://gosafer.xyz/img/static.png">
+    <link rel="stylesheet" href="/css/boootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
     <title>GoSafer | Điều khoản và điều kiện sử dụng GoSafer</title>
 </head>
 <body>
-    <div class="" include-html="header-page"></div>
+    <?php view('components/header-page')->render() ?>
 
     <nav class="container-lg mb-2" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -33,10 +33,9 @@
             <p>Trong trường hợp sửa đổi nội dung các điều khoản và điều kiện sử dụng GoSafer, các nội dung sửa đổi sẽ được thông báo trên Cổng. Người sử dụng tiếp tục sử dụng và tiếp tục thực hiện các yêu cầu dịch vụ trên GoSafer có nghĩa là đã chấp nhận các sửa đổi đó.</p> 
            </div>
     </section>
-    <div class="" include-html="footer"></div>
+    <?php view('components/footer')->render() ?>
 
-    <script src="/resource/js/jquery.js"></script>
-    <script src="/resource/js/boootstrap5.js"></script>
-    <script src="/resource/js/main.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/boootstrap5.js"></script>
 </body>
 </html>

@@ -18,4 +18,9 @@ class HomeController extends BaseController
     {
         return view('introduction');
     }
+
+    public function terms(Request $request)
+    {
+        return view('terms');
+    }
 }
