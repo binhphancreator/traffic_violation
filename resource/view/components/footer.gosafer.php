@@ -22,8 +22,8 @@
                       <li class="breadcrumb-item" aria-current="page"><a href="/introduction">Giới thiệu</a></li>
                       <li class="breadcrumb-item" aria-current="page"><a href="/terms">Điều khoản</a></li>
                       <li class="breadcrumb-item" aria-current="page"><a href="/document">Tài liệu</a></li>
-                      <li class="breadcrumb-item" aria-current="page"><a href="/news-page">Tin tức</a></li>
-                      <li class="breadcrumb-item" aria-current="page"><a href="/lookup-violation">Tra cứu</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/news">Tin tức</a></li>
+                      <li class="breadcrumb-item" aria-current="page"><a href="/reports/lookup">Tra cứu</a></li>
                     </ol>
                 </nav>
                 <div class="d-flex align-items-center mb-2 justify-content-sm-end">
