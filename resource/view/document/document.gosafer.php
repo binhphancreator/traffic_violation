@@ -23,6 +23,7 @@
     </nav>
 
     <section class="main-content container-lg">
+        <?php if(session()->old('notify')) { $notify = session()->old('notify'); echo "<div class=\"alert alert-success mb-4\">$notify</div>";}  ?>
         <table class="table table-light mb-5">
             <thead>
                 <tr>
