@@ -24,6 +24,7 @@
 
     <section class="main-content container-lg mb-5">
         <?php if(session()->old('notify')) { $notify = session()->old('notify'); echo "<div class=\"alert alert-success mb-4\">$notify</div>";}  ?>
+        <?php if(session()->old('error')) { $error = session()->old('error'); echo "<div class=\"alert alert-danger p-2 mb-4\">$error</div>";}  ?>
         <form action="/reports/add" method="POST">
             <div class="p-3 py-4 shadow-sm rounded-3">
                 <div class="row mb-4">
@@ -52,7 +53,6 @@
                         <textarea class="form-control resize-none" id="contentInput" name="content" rows="5"></textarea>
                     </div>
                 </div>
-                <?php if(session()->old('error')) { $error = session()->old('error'); echo "<div class=\"alert-danger p-2 mb-4\">$error</div>";}  ?>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn-rounded-left p-2" href="/lookup-violation.html">Thêm mới</button>
                 </div>
