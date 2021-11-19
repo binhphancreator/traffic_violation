@@ -19,7 +19,8 @@ class Handler
     }
     public function handle(Request $request) {
         $this->bindRequest($request);
-        $response = $this->router->dispatch($request->url(), $request->method());
+        $url = trim($request->url(), '/');
+        $response = $this->router->dispatch($url, $request->method());
         if(is_string($response) || is_null($response))
         {
             $this->response = new BaseResponse(200, $response);
