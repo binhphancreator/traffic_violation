@@ -16,7 +16,10 @@ mklink /j "public/js" "./resource/js/"
 mklink /j "public/file" "./storage/file/" 
 ```
 
-- Dump dữ liệu:
+- SQL:
 ```
+//Dump dữ liệu
 mysqldump -u gosafer -p gosafer --no-data > sql/gosafer.sql
+//Nhập dữ liệu
+mysqldump -u gosafer -p gosafer < sql/gosafer.sql
 ```
