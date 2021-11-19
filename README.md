@@ -23,3 +23,10 @@ mysqldump -u gosafer -p gosafer --no-data > sql/gosafer.sql
 //Nhập dữ liệu
 mysqldump -u gosafer -p gosafer < sql/gosafer.sql
 ```
+
+- Admin:
+```
+//User
+admin@gosafer.xyz
+gosafer
+```
