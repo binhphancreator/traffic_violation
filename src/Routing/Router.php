@@ -18,21 +18,25 @@ class Router
     }
 
     public function get($url, $callback){
+        $url = trim($url, '/');
         $route = Route::get($url, $callback);
         $this->addRoute($route);
     }
 
     public function post($url, $callback){
+        $url = trim($url, '/');
         $route = Route::post($url, $callback);
         $this->addRoute($route);
     }
 
     public function put($url, $callback){
+        $url = trim($url, '/');
         $route = Route::put($url, $callback);
         $this->addRoute($route);
     }
 
     public function delete($url, $callback){
+        $url = trim($url, '/');
         $route = Route::delete($url, $callback);
         $this->addRoute($route);
     }

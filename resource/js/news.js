@@ -7,7 +7,7 @@ function stripHtml(html)
 
 var index = 0;
 news.forEach(el => {
-    let imgsrc = el.content.match(/<img(\w|\d|["'/ \.=])+>/);
+    let imgsrc = el.content.match(/src="(\w|\d|[-/:._])+"/);
     if(index)
     {
         $('#newsList').append(
@@ -15,7 +15,7 @@ news.forEach(el => {
                 <div class="col-xl-3 col-md-4 col-sm-6 col-12 my-1">
                     <div class="card-news">
                         <a href="/news.html" class="card-news-img mb-4">
-                            ${imgsrc[0]}
+                            <img ${imgsrc[0]} >
                         </a>
                         <a href="/news/detail/?id=${el.id}" class="card-news-title">${el.title}</a>
                         <p class="card-news-content text-secondary mb-0">${stripHtml(el.content).substr(0,200)}</p>
@@ -29,7 +29,7 @@ news.forEach(el => {
                 <div class="col-12">
                     <div class="card-news card-hoz">
                         <a href='/news.html' class="card-news-img mb-4">
-                            ${imgsrc[0]}
+                            <img ${imgsrc[0]} >
                         </a>
                         <div class="card-news-body">
                             <a href="/news/detail/?id=${el.id}" class="card-news-title">${el.title}</a>
