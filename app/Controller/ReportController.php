@@ -17,7 +17,7 @@ class ReportController extends BaseController
 
     public function create(Request $request)
     {
-        $validate = $request->code!='' && $request->title!='' && $request->created_at!='' && $request->content!='';
+        $validate = $request->code!='' && $request->title!='' && $request->created_at!='' && $request->content!='' && $request->license_plate;
         if(!$validate) return redirect('/reports/add')->with(['error' => 'Mã biên bản, tiêu đề, ngày lập, nội dung không được để trống.']);
         $data = $request->all();
         $report = new Report();
@@ -36,7 +36,7 @@ class ReportController extends BaseController
 
     public function lookup(Request $request)
     {
-        $report = (new Report())->where('code', $request->code)->first();
+        $report = (new Report())->where('code', $request->code)->orWhere('license_plate', $request->code)->first(); 
         $response = [
             'status' => $report!=null,
             'data' => $report ? $report->get() : null,

@@ -94,6 +94,13 @@ abstract class Model
         return $this;
     }
 
+    public function orWhere(...$args)
+    {
+        $this->single = false;
+        call_user_func_array(array($this->builder, 'orWhere'), $args);
+        return $this;
+    }
+
     public function first()
     {
         if(!isset($this->data))

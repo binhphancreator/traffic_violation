@@ -27,8 +27,8 @@
             <div class="p-3 py-4 shadow-sm rounded-3">
                 <div class="row mb-4">
                     <div class="col-12">
-                        <label for="idReportInput" class="form-label">Mã biên bản</label>
-                        <input type="text" placeholder="Mã biên bản xử phạt" class="form-control" id="codeInput" name="code">
+                        <label for="idReportInput" class="form-label">Mã biên bản hoặc biển số xe</label>
+                        <input type="text" placeholder="Mã biên bản xử phạt, biển số xe" class="form-control" id="codeInput" name="code">
                     </div>
                 </div>
                 <p class="text-danger"><small>

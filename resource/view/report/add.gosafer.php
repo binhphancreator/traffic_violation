@@ -49,6 +49,10 @@
                         <textarea class="form-control resize-none" id="recordedInput" name="recorded" rows="3"></textarea>
                     </div>
                     <div class="col-12 mb-4">
+                        <label for="license_plate" class="form-label">Biển số xe vi phạm</label>
+                        <input class="form-control resize-none" id="license_plate" name="license_plate">
+                    </div>
+                    <div class="col-12 mb-4">
                         <label for="contentInput" class="form-label">Nội dung</label>
                         <textarea class="form-control resize-none" id="contentInput" name="content" rows="5"></textarea>
                     </div>
