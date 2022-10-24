@@ -21,8 +21,8 @@ class Auth
 
     public function login($email, $password)
     {
-        $user = (new User)->where('email', $email)->where('password', $password)->first();
-        if($user) {
+        $user = (new User)->where('email', $email)->first();
+        if($user && password_verify($password, $user->password)) {
             $this->session->set('auth', true);
             $this->session->set('email', $email);
             $this->user = $user;

@@ -31,7 +31,6 @@ class ReportController extends BaseController
 
     public function showLookupForm(Request $request)
     {
-        if(!auth()->loggined()) return redirect('/');
         return view('report/lookup');
     }
 

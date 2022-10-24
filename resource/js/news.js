@@ -8,13 +8,13 @@ function stripHtml(html)
 var index = 0;
 news.forEach(el => {
     let imgsrc = el.content.match(/src="(\w|\d|[-/:._])+"/);
-    if(index)
+    if(index && imgsrc.length)
     {
         $('#newsList').append(
             `
                 <div class="col-xl-3 col-md-4 col-sm-6 col-12 my-1">
                     <div class="card-news">
-                        <a href="/news.html" class="card-news-img mb-4">
+                        <a href="/news/detail/?id=${el.id}" class="card-news-img mb-4">
                             <img ${imgsrc[0]} >
                         </a>
                         <a href="/news/detail/?id=${el.id}" class="card-news-title">${el.title}</a>
