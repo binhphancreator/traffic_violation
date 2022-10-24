@@ -19,7 +19,7 @@ mklink /j "public/file" "./storage/file/"
 - SQL:
 ```
 //Dump dữ liệu
-mysqldump -u gosafer -p gosafer --no-data > sql/gosafer.sql
+mysqldump -u gosafer -p gosafer > sql/gosafer.sql
 //Nhập dữ liệu
 mysqldump -u gosafer -p gosafer < sql/gosafer.sql
 ```
