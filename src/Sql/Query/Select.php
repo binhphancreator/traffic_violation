@@ -54,4 +54,8 @@ class Select extends Table
     {
         call_user_func_array(array($this->where, 'where'), $args);
     }
+
+    public function orWhere(...$args) {
+        call_user_func_array(array($this->where, 'orWhere'), $args);
+    }
 }

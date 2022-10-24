@@ -80,9 +80,10 @@ CREATE TABLE `reports` (
   `record_makers` text NOT NULL,
   `recorded` text NOT NULL,
   `title` varchar(250) NOT NULL,
+  `license_plate` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `reports_UN` (`code`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,6 +92,8 @@ CREATE TABLE `reports` (
 
 LOCK TABLES `reports` WRITE;
 /*!40000 ALTER TABLE `reports` DISABLE KEYS */;
+INSERT INTO `reports` VALUES
+(2,'Bienban','BB1','2022-10-27','Đại Úy Nguyễn Văn Dùng','Phan Văn Bình','Vi phạm hành chính','90B293438');
 /*!40000 ALTER TABLE `reports` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,4 +135,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-24  2:54:28
+-- Dump completed on 2022-10-24  7:49:11

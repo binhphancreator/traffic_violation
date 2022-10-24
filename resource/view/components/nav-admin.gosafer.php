@@ -14,7 +14,8 @@
                         Quản lý vi phạm
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu vi phạm</a></li>
+                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu theo mã biên bản</a></li>
+                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu theo biển số xe</a></li>
                         <li><a class="dropdown-item" href="/reports/add">Thêm mới biên bản</a></li>
                     </ul>
                 </div>

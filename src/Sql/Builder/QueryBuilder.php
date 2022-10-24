@@ -51,6 +51,7 @@ class QueryBuilder implements BuilderInterface
         switch($method)
         {
             case 'where':
+            case 'orWhere':
                 call_user_func_array(array($this->query, $method), $arguments);
                 return $this;
                 break;

@@ -14,7 +14,8 @@
                         Tra cứu
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu vi phạm</a></li>
+                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu theo mã biên bản</a></li>
+                        <li><a class="dropdown-item" href="/reports/lookup">Tra cứu theo biển số xe</a></li>
                     </ul>
                 </div>
                 <a class="nav-link" href="/document">Tài liệu</a>
