@@ -24,6 +24,8 @@ route()->get('/logout', [LoginController::class, 'logout']);
 route()->get('/reports/add', [ReportController::class, 'showCreateForm']);
 route()->post('/reports/add', [ReportController::class, 'create']);
 route()->get('/reports/lookup', [ReportController::class, 'showLookupForm']);
+route()->get('/reports', [ReportController::class, 'index']);
+route()->post('/reports/delete', [ReportController::class, 'delete']);
 
 route()->get('/news', [NewsController::class, 'index']);
 route()->get('/news/detail', [NewsController::class, 'show']);

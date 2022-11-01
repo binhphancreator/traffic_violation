@@ -28,7 +28,7 @@ news.forEach(el => {
             `
                 <div class="col-12">
                     <div class="card-news card-hoz">
-                        <a href='/news.html' class="card-news-img mb-4">
+                        <a href="/news/detail/?id=${el.id}" class="card-news-img mb-4">
                             <img ${imgsrc[0]} >
                         </a>
                         <div class="card-news-body">
