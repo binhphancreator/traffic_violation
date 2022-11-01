@@ -17,6 +17,7 @@
                         <li><a class="dropdown-item" href="/reports/lookup">Tra cứu theo mã biên bản</a></li>
                         <li><a class="dropdown-item" href="/reports/lookup">Tra cứu theo biển số xe</a></li>
                         <li><a class="dropdown-item" href="/reports/add">Thêm mới biên bản</a></li>
+                        <li><a class="dropdown-item" href="/reports">Danh sách biên bản</a></li>
                     </ul>
                 </div>
                 <div class="nav-item dropdown">

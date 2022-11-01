@@ -43,4 +43,19 @@ class ReportController extends BaseController
         ];
         return $response;
     }
+
+    public function index() {
+        if(!auth()->loggined()) return redirect('/');
+
+        $report = new Report();
+        return view('report/index', ['reports' => $report->all()]);
+    }
+
+    public function delete(Request $request) {
+        $report = (new Report())->find($request->id);
+        if($report) {
+            $report->delete();
+        }
+        return $report->get();
+    }
 }
